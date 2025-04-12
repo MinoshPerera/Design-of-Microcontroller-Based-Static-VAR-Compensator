@@ -1,7 +1,6 @@
-# ⚡ Off-Grid Inverter with Integrated Static VAR Compensator (SVC) ⚙️🔋
+# ⚡ Off-Grid Inverter with Static VAR Compensator (SVC) ⚙️🔋
 
-![Project Banner](https://img.shields.io/badge/Microcontroller-ATmega328P-blue?style=flat&logo=arduino)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Project Badge](https://img.shields.io/badge/Microcontroller-ATmega328P-blue?style=flat&logo=arduino)
 ![Platform](https://img.shields.io/badge/Platform-Arduino%20IDE-orange)
 
 ## 🛠 Project Overview
@@ -56,7 +55,7 @@ This project involves the **design and development of a single-phase off-grid in
 - **Capacitor Bank (2.5μF, 5μF, 7.5μF, 10μF)**
 - **4-Channel Relay Module (MD0083)**
 - **20x4 I2C LCD Display**
-- **Breadboard + Soldered PCB (Designed on EasyEDA)**
+- **Soldered PCB (Designed on EasyEDA)**
 
 ---
 
@@ -69,16 +68,20 @@ This project involves the **design and development of a single-phase off-grid in
 
 ---
 
-## 📷 System Architecture
+## 🧠 Microcontroller Operation of SVC
 
-```txt
-+---------------------+       +------------------+       +------------------------+
-| Voltage & Current   | ----> | ATmega328P MCU   | --->  | Capacitor Bank Control |
-| Sensors (ZCD, CT/PT)|       | (Power Calc + PF)|       | (Relay Module)         |
-+---------------------+       +------------------+       +------------------------+
-                                         |
-                                         v
-                             +-------------------------+
-                             |  Real-Time LCD Display  |
-                             |  (Voltage, Current, PF) |
-                             +-------------------------+
+The figure below illustrates the **signal flow and component interactions** within the SVC system, coordinated by the ATmega328P microcontroller. It shows how voltage and current sensing, zero-crossing detection, and capacitor switching work together to monitor and correct power factor in real-time.
+
+![Microcontroller Operation of SVC](images/svc_microcontroller_operation.png)
+
+---
+
+## 📈 System Performance
+
+| Parameter         | Before (Initial) | After (With SVC) |
+|------------------|------------------|------------------|
+| Power Factor      | 0.70             | 0.98             |
+| Reactive Loss     | High             | Minimized        |
+| Voltage Stability | Unstable         | Stable           |
+
+---
