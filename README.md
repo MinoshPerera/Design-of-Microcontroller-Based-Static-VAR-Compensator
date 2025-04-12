@@ -72,7 +72,7 @@ This project involves the **design and development of a single-phase off-grid in
 
 The figure below illustrates the **signal flow and component interactions** within the SVC system, coordinated by the ATmega328P microcontroller. It shows how voltage and current sensing, zero-crossing detection, and capacitor switching work together to monitor and correct power factor in real-time.
 
-![Microcontroller Operation of SVC](images/svc_microcontroller_operation.png)
+![Microcontroller Operation of SVC](/svc_microcontroller_operation.png)
 
 ---
 
