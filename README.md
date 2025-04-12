@@ -2,7 +2,7 @@
 
 ![Project Badge](https://img.shields.io/badge/Microcontroller-ATmega328P-blue?style=flat&logo=arduino)
 ![Platform](https://img.shields.io/badge/Platform-Arduino%20IDE-orange)
-
+ 
 ## 🛠 Project Overview
 
 This project involves the **design and development of a single-phase off-grid inverter** system integrated with a **Static VAR Compensator (SVC)**. It focuses on **real-time power factor correction**, **reactive power compensation**, and **voltage stability**—key factors in enhancing power quality and energy efficiency in off-grid and hybrid renewable energy environments.
